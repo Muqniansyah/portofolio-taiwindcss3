@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#fb923c",
+        secondary: "#64748b",
         dark: "#0f172a",
       },
       // custom ukuran layar
