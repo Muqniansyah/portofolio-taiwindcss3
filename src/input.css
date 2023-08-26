@@ -6,11 +6,13 @@
   font-family: "Inter", sans-serif;
 } */
 
+/* garis hamburger */
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark transition duration-300 ease-in-out;
+  @apply w-[30px] h-[2px] my-2 block bg-dark transition duration-300 ease-in-out dark:bg-white;
 }
 
 /* penambahan class active */
+/* arti: cari elemen yang nama classnya hamburger-active lalu cari elemen span persis didalamnya yang merupakan elemen span child pertama. */
 .hamburger-active > span:nth-child(1) {
   @apply rotate-45;
 }
@@ -25,7 +27,11 @@
 
 /* penambahan class navar-fixed */
 .navbar-fixed {
-  @apply fixed z-[9999] bg-white bg-opacity-70;
-  backdrop-filter: blur(5px);
+  @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+/* dark toggle */
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
 }
